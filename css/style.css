@@ -1,0 +1,34 @@
+@font-face {}
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html 
+	{
+		height: 100%;
+	}
+body 
+	{
+		min-height:100%; 
+		height:auto !important;
+		height:100%;
+		color:#fff;
+		background: #1a252f;
+	}
+
+.wrapper {
+	width: 1200px;
+	padding: 20px;
+	margin: 0 auto;
+	background: #000;
+}
+	header {
+
+	}
+	 	p {
+	 		padding-left: 15px;
+	 		border-left: 4px solid #34c2db;
+	 		font: normal 18px 'Georgia', Arial, sans-serif;
+	 	}
+	
