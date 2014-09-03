@@ -25,6 +25,11 @@ input, textarea, select {
 	outline: 0;
 	vertical-align: baseline;
 }
+
+
+sup {vertical-align: super; }
+sub { vertical-align: sub; }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
