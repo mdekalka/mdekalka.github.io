@@ -76,7 +76,7 @@
             </div>
             <!-- <div class="main-angler"></div> -->
             <div class="main-works">
-               <section class="main-works-block">
+               <section class="main-works-block private-flag">
                    <h3>Private works</h3>
                    <ul class="works-list">
                        <li>
@@ -489,7 +489,7 @@
                        </li>                 
                     </ul>
                </section> 
-               <section class="main-works-block">
+               <section class="main-works-block commercial-flag">
                    <h3>Some of commercial works</h3>
                    <ul class="works-list">
                         <li>
@@ -657,10 +657,10 @@
                        </li> 
                    </ul>
                 </section>
-                <section class="main-works-block">
+                <section class="main-works-block interesting-flag">
                    <h3>Interesting stuff</h3>
                    <ul class="works-list">
-                        <li>
+<!--                         <li>
                            <article class="work-container">
                                <div class="works-img">
                                    <a href="http://givememap.hol.es/" target="_blank"><img src="images/int.jpg" alt=""></a>
@@ -677,14 +677,12 @@
                                <div class="works-info">
                                    <h4>Handlebars template</h4>
                                    <div class="works-info-text">
-                                        <!-- text here -->
                                    </div>
                                    <div class="works-info-btn loading">
                                      <a href="http://givememap.hol.es/" target="_blank">View details</a>
                                    </div>
                                </div>
                            </article>
-                           <!-- status tooltip -->
                             <ol class="status-menu" id="status-tooltip">
                                 <li>
                                     <i class="fa fa-bookmark status-active"></i>
@@ -699,7 +697,6 @@
                                     <sup>freezed</sup>
                                 </li>  
                             </ol>
-                            <!-- end of status tooltip -->
                        </li> 
 
                        <li>
@@ -720,14 +717,12 @@
                                <div class="works-info">
                                    <h4>Underscore template/Backbone</h4>
                                    <div class="works-info-text">
-                                        <!-- text here -->
                                    </div>
                                    <div class="works-info-btn loading">
                                      <a href="http://templateinfo.hol.es/" target="_blank">View details</a>
                                    </div>
                                </div>
                            </article>
-                           <!-- status tooltip -->
                             <ol class="status-menu" id="status-tooltip">
                                 <li>
                                     <i class="fa fa-bookmark status-active"></i>
@@ -742,8 +737,8 @@
                                     <sup>freezed</sup>
                                 </li>  
                             </ol>
-                            <!-- end of status tooltip -->
-                       </li> 
+                       </li>  -->
+
                     </ul>
                 </section>  
                 <footer>
@@ -802,9 +797,47 @@
 <a href="#" class="toTop">
     <i class="fa fa-chevron-up"></i>
 </a>
-
+<script id="entry-template" type="text/x-handlebars-template">
+<li>
+   <article class="work-container">
+       <div class="works-img">
+           <a href="{{link}}" target="_blank"><img src="{{img}}" alt=""></a>
+           <div class="works-status">
+               <i class="fa fa-bookmark {{status}}"></i>
+           </div>
+           <ul class="works-technology">
+           {{#each technology}}
+               <li class="{{delayId}}">{{technologyName}}</li>
+            {{/each}}   
+           </ul>
+       </div> 
+       <div class="works-info">
+           <h4>{{title}}</h4>
+           <div class="works-info-text">
+           </div>
+           <div class="works-info-btn">
+             <a href="{{link}}" target="_blank">View details</a>
+           </div>
+       </div>
+   </article>
+    <ol class="status-menu" id="status-tooltip">
+        <li>
+            <i class="fa fa-bookmark status-active"></i>
+            <sup>finished</sup>            
+        </li>
+        <li>
+            <i class="fa fa-code status-loading"></i>
+            <sup>active</sup>
+        </li>
+        <li>
+            <i class="fa fa-remove status-freezed"></i>
+            <sup>freezed</sup>
+        </li>  
+    </ol>
+</li>    
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="js/libs/jquery-1.7.1.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/2.0.0-alpha.4/handlebars.min.js"></script>
 <script src="js/main.js" type="text/javascript"></script>
 
 </body>

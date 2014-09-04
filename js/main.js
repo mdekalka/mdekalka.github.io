@@ -18,10 +18,19 @@ $(document).ready(function() {
     function setListeners() {
         $(window).scroll(scrollCallback);
         $infoBtn.on('click', infoBtnCallback);
-        $status.hover(statusInCallback, statusOutCallback );
+        // $status.hover(statusInCallback, statusOutCallback );
         $contentImg.on('click', preventCallback);
         $contentBtn.on('click', preventCallback);
         $toTopBtn.on('click', toTopCallback);
+
+        $(document).on('mouseover', ".works-status", function(e) {
+            $(this).closest('li').find(".status-menu").addClass('show');
+            console.log('piu');
+        });
+
+        $(document).on('mouseleave', ".works-status", function() {
+            $('.status-menu').removeClass('show');
+        })
 
         function infoBtnCallback(e) {
             e.preventDefault();
@@ -29,16 +38,6 @@ $(document).ready(function() {
 
             $self.toggleClass('open');
             $infoList.toggleClass('animated');
-        };
-
-        function statusInCallback(e) {
-            var $self = $(this);
-
-            $self.closest('li').find($statusWindow).addClass('show');
-        };
-
-        function statusOutCallback() {
-            $statusWindow.removeClass('show');
         };
 
         function preventCallback(e) {
@@ -77,6 +76,47 @@ $(document).ready(function() {
         b.setAttribute('data-useragent',  navigator.userAgent);
         b.setAttribute('data-platform', navigator.platform );   
     };
+
+    /*================================================================
+                        >>> HandleBars template <<<  
+      ================================================================*/
+        getTemplate();
+        function getTemplate() {
+            var interestingBlock = $('.interesting-flag').find('.works-list'),
+                privateBlock = $('.private-flag').find('.works-list'),
+                commercialBlock = $('.commercial-flag').find('.works-list');
+
+            $.ajax({
+                type: "GET",
+                url: "../data.json",
+                dataType: "json",
+                success: function(data) {
+                    var content,    
+                        source   = $("#entry-template").html(),
+                        template = Handlebars.compile(source),
+                        htmlPrivate = "",
+                        htmlInteresting = " ",
+                        htmlCommercial = " ";
+
+                    for (var i = 0, l = data.length; i < l; i++) {
+                        if (data[i]["flag"] === "private") {
+                           content = data[i];
+                           htmlPrivate += template(content); 
+                        } else if (data[i]["flag"] === "interesting") {
+                            content = data[i];
+                            htmlInteresting += template(content); 
+                        } else if (data[i]["flag"] === "commercial") {
+                            content = data[i];
+                            htmlCommercial += template(content);  
+                        };
+                    };
+                    interestingBlock.append(htmlInteresting);
+                    privateBlock.append(htmlPrivate);
+                    commercialBlock.append(htmlCommercial);
+                }
+            });
+       };
+
 
 
   

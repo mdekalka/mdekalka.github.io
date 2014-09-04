@@ -1,0 +1,77 @@
+[
+    {
+        "flag": "private",
+        "link": "http://gearnotcool.hol.es/",
+        "img": "images/gear_proj.png",
+        "status": "status-active",
+        "technology": [
+            {
+                "delayId": "delay-one",
+                "technologyName": "HTML"
+            },
+            {
+                "delayId": "delay-two",
+                "technologyName": "CSS"
+            },
+            {
+                "delayId": "delay-three",
+                "technologyName": "JS"
+            }
+        ],
+        "title": "Gears not cool"
+    },
+    {
+        "flag": "interesting",
+        "link": "http://givememap.hol.es/",
+        "img": "images/int.jpg",
+        "status": "status-loading",
+        "technology": [
+            {
+                "delayId": "delay-one",
+                "technologyName": "HTML"
+            },
+            {
+                "delayId": "delay-two",
+                "technologyName": "CSS"
+            },
+            {
+                "delayId": "delay-three",
+                "technologyName": "jQuery"
+            },
+            {
+                "delayId": "delay-four",
+                "technologyName": "HB.js"
+            }
+        ],
+        "title": "Handlebars template"
+    },
+    {
+        "flag": "interesting",
+        "link": "http://templateinfo.hol.es/",
+        "img": "images/int1.jpg",
+        "status": "status-active",
+        "technology": [
+            {
+                "delayId": "delay-one",
+                "technologyName": "HTML"
+            },
+            {
+                "delayId": "delay-two",
+                "technologyName": "CSS"
+            },
+            {
+                "delayId": "delay-three",
+                "technologyName": "jQuery"
+            },
+            {
+                "delayId": "delay-four",
+                "technologyName": "BB.js"
+            },
+            {
+                "delayId": "delay-fifth",
+                "technologyName": "US.js"
+            }
+        ],
+        "title": "Underscore template/Backbone"
+    }
+]
