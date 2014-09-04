@@ -1,0 +1,18 @@
+ .aside-know a > span {
+    transform: none;
+    background: red;
+    color: yellow;
+}
+.aside-know a:hover > span {
+    transform: none;
+}
+
+.aside-know a:hover > span:after {
+    background: #8ac51b;
+    transform: none;
+}
+
+.aside-know a > span:after {
+    background: #141414;
+    transform: none;
+}

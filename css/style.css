@@ -361,33 +361,77 @@ body
 			padding: 50px 0;
 		}
 			.aside-container {
-				padding: 0 15px;
+				padding: 0 0 0 15px;
+                margin-bottom: 35px;
 				text-align: center;
 			}
+                .aside-read {
+                    position: relative;
+                    z-index: 2;
+                    background: #141414;
+                }
+                .aside-read li {
+                    position: relative;
+                }
+                .aside-read a {
+                    position: relative;
+                    display: block;
+                    padding: 15px 10px;
+                    z-index: 1;
+                    text-decoration: none;
+                    color: #fff;
+                    
+                }
+                .aside-read li:after {
+                    content:" ";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 0;
+                    height: 100%;
+                    z-index: -1;
+                    background: #8ac51b;
+                    -webkit-transition: all .3s ease-in;
+                    -moz-transition: all .3s ease-in;
+                    transition: all .3s ease-in;
+                }
+                .aside-read li:hover:after {
+                    width: 100%;
+                }
 				.aside-container li {
 					position: relative;
 					overflow: hidden;
 				}
 
-					.aside-container a {
+					.aside-know a {
 						position: relative;
 						display: block;
-						padding: 15px 25px;
 						z-index: 100;
 						color: #fff;
-						background: #141414;
 						text-decoration: none;
 					}
-					.aside-container a:hover > span{
+                    html[data-useragent*='MSIE 10.0'] .aside-know a:hover > span {
+                        transform:none;
+                    }
+                    html[data-useragent*='MSIE 10.0'] .aside-know a:hover > span:after {
+                        background: #8ac51b !important;
+                    }
+					.aside-know a:hover > span {
 						-webkit-transform: translate3d(0px, 0px, -30px) rotateX(90deg);
 						-moz-transform: translate3d(0px, 0px, -30px) rotateX(90deg);
 						transform: translate3d(0px, 0px, -30px) rotateX(90deg);
 					}
-						.aside-container a > span  {
+                        html[data-useragent*='MSIE 10.0'] .aside-know a > span {
+                            transform:none;
+                            
+                        }
+						.aside-know a > span  {
 							background: none repeat scroll 0 0 #2f313a;
 						    display: block;
 						    font-size: 16px;
-						    padding: 10px;
+						    /*height: 25px;*/
+						    background: #141414;
+						    padding: 15px 10px;
 						    -webkit-transform-origin: 50% 0 0;
 						    -moz-transform-origin: 50% 0 0;
 						    transform-origin: 50% 0 0;
@@ -398,13 +442,18 @@ body
 						    -moz-transition: all 400ms ease 0s;
 						    transition: all 400ms ease 0s;
 						}
-						.aside-container a > span:after {
-							background: none repeat scroll 0 0 #658fa2;
+                        html[data-useragent*='MSIE 10.0'] .aside-know a > span:after {
+                            transform:none;
+                            background: #141414 !important;
+                        }
+						.aside-know a > span:after {
+							background: none repeat scroll 0 0 #8ac51b;
 						    color: #fff;
 						    content: attr(data-title);
 						    display: block;
+						    width: 100%;
 						    left: 0;
-						    padding: 10px;
+						    padding: 15px 0;
 						    position: absolute;
 						    top: 0;
 						    -webkit-transform: translate3d(0px, 105%, 0px) rotateX(-90deg);
@@ -419,6 +468,72 @@ body
 					color: #96D71D;
 					font: normal 20px 'Open Sans';
 				}
+    footer {
+        margin-top: 35px;
+        border-top: 2px solid #96d71d;
+    }  
+        .footer-container {
+            padding-top: 20px;
+        }
+        .social-wrapper {
+            position: relative;
+            width: 100px;
+            height: 140px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .social-list {
+
+        } 
+            .social-list li {
+                position: absolute;
+                display: inline-block;
+            }
+            .social-facebook {
+                top: 10px;
+                left: 0;
+            }
+            .social-linkedin {
+                top: 42px;
+                left: 33px;
+            }
+            .social-twitter {
+                top: 42px;
+                left: -33px;
+            }
+            .social-github {
+                position: absolute;
+                top: 75px;
+                left: -10px;
+                width: 60px;
+                height: 60px;
+            }
+            .social-github img {
+                width: 100%;
+                height: 100%;
+            }
+           .social-list a {
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                border: 2px solid #96d71d;
+                text-align: center;
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                transform: rotate(45deg);
+            }
+            .social-list a:hover {
+                background: #96d71d;
+                color: #fff;
+                border-color: #000;
+            }
+            .social-list i {
+                line-height: 40px;
+                color: #fff;
+                -webkit-transform: rotate(-45deg);
+                -moz-transform: rotate(-45deg);
+                transform: rotate(-45deg);
+            }         
 
 
 /*================================================================
@@ -458,6 +573,39 @@ body
 	.status-loading + sup { color: #dce631; }
 	.status-freezed + sup { color: #FF0000; }
 
+
+/*================================================================
+                    >>> To top button <<<  
+  ================================================================*/
+  .toTop {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: inline-block;
+    padding: 20px;
+    opacity: 0;
+    visibility: hidden;
+    background: #000;
+    -webkit-transition:all .3s linear;
+    -moz-transition:all .3s linear;
+    transition:all .3s linear;
+  }
+  .toTop.show {
+    opacity: 1;
+    visibility: visible;
+  }
+  .toTop:hover {
+    background: #96d71d;
+  }
+  .toTop:hover i {
+    color: #fff;
+  }
+    .toTop i {
+        color: #96d71d;
+        -webkit-transition:all .3s linear;
+        -moz-transition:all .3s linear;
+        transition:all .3s linear;
+    } 
 
 /*================================================================
 					>>> ANIMATION <<<  

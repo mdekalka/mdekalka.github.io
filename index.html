@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Github.io page</title>
+<title>Github main project's page</title>
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- META -->
@@ -24,6 +24,7 @@
 <link rel="stylesheet" href="css/style.css">
 <!-- we can live with IE -->
 <!--[if lt IE 9]><script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+<!--[if lte IE 9]><link rel="stylesheet" type="text/css" href="css/ie.css" /><![endif]-->
 </head>
 <body>
 
@@ -744,34 +745,63 @@
                             <!-- end of status tooltip -->
                        </li> 
                     </ul>
-                </section>    
-                      
+                </section>  
+                <footer>
+                    <div class="footer-container">
+                        <div class="social-wrapper">
+                            <ul class="social-list">
+                                <li class="social-facebook"><a href=""><i class="fa fa-facebook"></i></a></li>
+                                <li class="social-linkedin"><a href=""><i class="fa fa-linkedin"></i></a></li>
+                                <li class="social-twitter"><a href=""><i class="fa fa-twitter"></i></a></li>
+                            </ul>
+                            <a href="https://github.com/mdekalka" class="social-github"><img src="images/footer-logo.png" alt=""></a>
+                        </div>
+                    </div>
+                </footer>  
             </div> <!-- end of main works -->
         </div>
         <aside class="aside-content">
             <div class="aside-container">
-                <h3>Interesting to know</h3>
-                <ul>
+                <h3>Need to know</h3>
+                <ul class="aside-know">
                     <li>
-                        <a href="">Underscore<span data-title="Underscore"></span></a>
+                        <a href="http://underscorejs.org/" target="_blank"><span data-title="Underscore">Underscore</span></a>
                     </li>
                     <li>
-                        <a href="">Backbone<span data-title="Backbone"></span></a>
+                        <a href="http://backbonejs.org/" target="_blank"><span data-title="Backbone">Backbone</span></a>
                     </li>
                     <li>
-                        <a href="">Handlebars<span data-title="Handlebars"></span></a>
+                        <a href="http://handlebarsjs.com/" target="_blank"><span data-title="Handlebars">Handlebars</span></a>
                     </li>
                     <li>
-                        <a href="">Angular<span data-title="Angular"></span></a>
+                        <a href="https://angularjs.org/" target="_blank"><span data-title="Angular">Angular</span></a>
                     </li>
                     <li>
-                        <a href="http://csspre.com/">CSSpre</a>
+                        <a href="http://csspre.com" target="_blank"><span data-title="CSSpre">CSSpre</span></a>
                     </li>
+                    <li>
+                        <a href="http://www.inserthtml.com/" target="_blank"><span data-title="insertHTML">insertHTML</span></a>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="aside-container">
+                <h3>Need to read</h3>
+                <ul class="aside-read">
+                    <li><a href="http://csspre.com" target="_blank">CSSpre</a></li>
+                    <li><a href="http://www.inserthtml.com/" target="_blank">insertHTML</a></li>
+                    <li><a href="http://tympanus.net/codrops/" target="_blank">tympanus</a></li>
+                    <li><a href="http://www.codewars.com/" target="_blank">codewars</a></li>
+                    <li><a href="http://frontender.info" target="_blank">frontender.info</a></li>
                 </ul>
             </div>
         </aside>
     </div>
 </div>
+
+<a href="#" class="toTop">
+    <i class="fa fa-chevron-up"></i>
+</a>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="js/libs/jquery-1.7.1.min.js" type="text/javascript"></script>
