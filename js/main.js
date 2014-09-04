@@ -3,9 +3,11 @@ $(document).ready(function() {
 	'use strict';
     var $infoBtn = $('.wrapper-block').find('a'),
         $infoList = $('.wrapper-block').find('ul'),
-        $contentBoxes = $('.works-list').find('li'),
         $status = $('.works-status'),
         $statusWindow = $('.status-menu'),
+        $contentBoxes = $('.works-list').find('li'),
+        $contentImg = $('.works-img'),
+        $contentBtn = $('.works-info-btn').find('a'),
         flag = false;
 
     /*================================================================
@@ -14,7 +16,9 @@ $(document).ready(function() {
     setListeners();
     function setListeners() {
         $infoBtn.on('click', infoBtnCallback);
-        $status.hover(statusInCallback, statusOutCallback )
+        $status.hover(statusInCallback, statusOutCallback );
+        $contentImg.on('click', preventCallback);
+        $contentBtn.on('click', preventCallback);
 
         function infoBtnCallback(e) {
             e.preventDefault();
@@ -25,33 +29,22 @@ $(document).ready(function() {
         };
 
         function statusInCallback(e) {
-            var $buffer = $('.buffer-status'),
-                responseHTML;
-            if (!flag) {
-                // $contentBoxes.append( $buffer.load('../features.html #status-tooltip', function() { flag = true; }) ); 
-                // $buffer.load('features.html', function() {
-                //     console.log($buffer);
-                //     flag = true;
-                // });
-                // $contentBoxes.append($buffer);
-                $.ajax({
-                    type: "GET",
-                    url: 'features.html',
-                    success: function(data) {
-                        flag = true;
-                        responseHTML = data;
-                        console.log(responseHTML);
-                    }
-                });
-                $contentBoxes.append(responseHTML);
-            };
+            var $self = $(this);
 
-            $statusWindow.addClass('show');  
-  
+            $self.closest('li').find($statusWindow).addClass('show');
         };
 
         function statusOutCallback() {
             $statusWindow.removeClass('show');
+        };
+
+        function preventCallback(e) {
+            var $self = $(this),
+                $checkBtn = $self.closest('div');
+            
+            if ($self.hasClass('img-prevent') || $checkBtn.hasClass('freezed')) {
+                return false;
+            };      
         };
     };
 
