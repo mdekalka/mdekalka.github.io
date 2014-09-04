@@ -9,6 +9,7 @@ $(document).ready(function() {
         $contentImg = $('.works-img'),
         $contentBtn = $('.works-info-btn').find('a'),
         $toTopBtn = $('.toTop'),
+        $loaderOverlay = $('.loader-overlay'),
         flag = false;
 
     /*================================================================
@@ -18,9 +19,6 @@ $(document).ready(function() {
     function setListeners() {
         $(window).scroll(scrollCallback);
         $infoBtn.on('click', infoBtnCallback);
-        // $status.hover(statusInCallback, statusOutCallback );
-        $contentImg.on('click', preventCallback);
-        $contentBtn.on('click', preventCallback);
         $toTopBtn.on('click', toTopCallback);
 
         $(document).on('mouseover', ".works-status", function(e) {
@@ -30,7 +28,19 @@ $(document).ready(function() {
 
         $(document).on('mouseleave', ".works-status", function() {
             $('.status-menu').removeClass('show');
-        })
+        });
+
+        $(document).on('click', '.works-img', preventEvent);
+        $(document).on('click', '.works-info-btn > a', preventEvent);
+
+        function preventEvent() {
+            var $this = $(this), 
+                $checkBtn = $(this).closest('div');
+
+            if ($this.hasClass('img-prevent') || $checkBtn.hasClass('freezed')) {
+                return false;
+            };
+        };           
 
         function infoBtnCallback(e) {
             e.preventDefault();
@@ -38,15 +48,6 @@ $(document).ready(function() {
 
             $self.toggleClass('open');
             $infoList.toggleClass('animated');
-        };
-
-        function preventCallback(e) {
-            var $self = $(this),
-                $checkBtn = $self.closest('div');
-            
-            if ($self.hasClass('img-prevent') || $checkBtn.hasClass('freezed')) {
-                return false;
-            };      
         };
 
         function toTopCallback(e) {
@@ -86,6 +87,7 @@ $(document).ready(function() {
                 privateBlock = $('.private-flag').find('.works-list'),
                 commercialBlock = $('.commercial-flag').find('.works-list');
 
+            $loaderOverlay.show();
             $.ajax({
                 type: "GET",
                 url: "../data.json",
@@ -113,6 +115,8 @@ $(document).ready(function() {
                     interestingBlock.append(htmlInteresting);
                     privateBlock.append(htmlPrivate);
                     commercialBlock.append(htmlCommercial);
+
+                    $loaderOverlay.hide();
                 }
             });
        };

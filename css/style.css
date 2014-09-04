@@ -607,6 +607,44 @@ body
         transition:all .3s linear;
     } 
 
+
+/*================================================================
+                    >>> OVERLAY <<<  
+  ================================================================*/
+  .loader-overlay {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgba(0,0,0, 0.6);
+  }
+    .loader-body {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -18px;
+        margin-left: -75px;
+        width: 150px;
+        height: 36px;
+        background: #000;
+    }
+    .loader-body:after {
+        content: "15%";
+        position: absolute;
+        top: 10px;
+        right: -40px;
+    }
+    .loader-indicate {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 14px;
+        height: 100%;
+        background: #71A216;
+    }
+
 /*================================================================
 					>>> ANIMATION <<<  
   ================================================================*/

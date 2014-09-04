@@ -18,8 +18,297 @@
                 "technologyName": "JS"
             }
         ],
-        "title": "Gears not cool"
+        "title": "Gears not cool",
+        "state": "",
+        "blockLink": ""
     },
+    {
+        "flag": "private",
+        "link": "http://working-bees.hol.es/",
+        "img": "images/working_bees.png",
+        "status": "status-active",
+        "technology": [
+            {
+                "delayId": "delay-one",
+                "technologyName": "HTML"
+            },
+            {
+                "delayId": "delay-two",
+                "technologyName": "CSS"
+            },
+            {
+                "delayId": "delay-three",
+                "technologyName": "jQuery"
+            }
+        ],
+        "title": "Working Bees",
+        "state": "",
+        "blockLink": ""
+    },
+    {
+        "flag": "private",
+        "link": "",
+        "img": "images/la2_fon.png",
+        "status": "status-freezed",
+        "technology": [
+            {
+                "delayId": "delay-one",
+                "technologyName": "HTML"
+            },
+            {
+                "delayId": "delay-two",
+                "technologyName": "CSS"
+            },
+            {
+                "delayId": "delay-three",
+                "technologyName": "jQuery"
+            }
+        ],
+        "title": "Good memories",
+        "state": "freezed",
+        "blockLink": "img-prevent"
+    },
+    {
+        "flag": "private",
+        "link": "",
+        "img": "images/gray_proj.png",
+        "status": "status-freezed",
+        "technology": [
+            {
+                "delayId": "delay-one",
+                "technologyName": "HTML"
+            },
+            {
+                "delayId": "delay-two",
+                "technologyName": "CSS"
+            },
+            {
+                "delayId": "delay-three",
+                "technologyName": "jQuery"
+            }
+        ],
+        "title": "Gray in action",
+        "state": "freezed",
+        "blockLink": "img-prevent"
+    },
+    {
+        "flag": "private",
+        "link": "http://puredark.hol.es/",
+        "img": "images/dark_proj.png",
+        "status": "status-active",
+        "technology": [
+            {
+                "delayId": "delay-one",
+                "technologyName": "HTML"
+            },
+            {
+                "delayId": "delay-two",
+                "technologyName": "CSS"
+            },
+            {
+                "delayId": "delay-three",
+                "technologyName": "jQuery"
+            }
+        ],
+        "title": "Pure Dark",
+        "state": "",
+        "blockLink": ""
+    },  
+    {
+        "flag": "private",
+        "link": "http://blueisperfect.hol.es/",
+        "img": "images/piu_fon.jpg",
+        "status": "status-active",
+        "technology": [
+            {
+                "delayId": "delay-one",
+                "technologyName": "HTML"
+            },
+            {
+                "delayId": "delay-two",
+                "technologyName": "CSS"
+            }
+        ],
+        "title": "Blue is Perfect",
+        "state": "",
+        "blockLink": ""
+    },    
+    {
+        "flag": "private",
+        "link": "",
+        "img": "images/rabbit_fon.png",
+        "status": "status-freezed",
+        "technology": [
+            {
+                "delayId": "delay-one",
+                "technologyName": "HTML"
+            },
+            {
+                "delayId": "delay-two",
+                "technologyName": "CSS"
+            }
+        ],
+        "title": "Never too late",
+        "state": "freezed",
+        "blockLink": "img-prevent"
+    },   
+    {
+        "flag": "private",
+        "link": "http://iheardflatiscool.hol.es/",
+        "img": "images/flatiscool_fon.png",
+        "status": "status-active",
+        "technology": [
+            {
+                "delayId": "delay-one",
+                "technologyName": "HTML"
+            },
+            {
+                "delayId": "delay-two",
+                "technologyName": "CSS"
+            }
+        ],
+        "title": "I heard flat is cool",
+        "state": "",
+        "blockLink": ""
+    },  
+    {
+        "flag": "private",
+        "link": "http://flatisanewmeta.hol.es/",
+        "img": "images/flatisanewmeta_fon.jpg",
+        "status": "status-active",
+        "technology": [
+            {
+                "delayId": "delay-one",
+                "technologyName": "HTML"
+            },
+            {
+                "delayId": "delay-two",
+                "technologyName": "CSS"
+            },
+            {
+                "delayId": "delay-three",
+                "technologyName": "jQuery"
+            }
+        ],
+        "title": "Flat is a new meta",
+        "state": "",
+        "blockLink": ""
+    },   
+    {
+        "flag": "private",
+        "link": "http://yellowdarkness.hol.es/",
+        "img": "images/yellowdarkness.jpg",
+        "status": "status-active",
+        "technology": [
+            {
+                "delayId": "delay-one",
+                "technologyName": "HTML"
+            },
+            {
+                "delayId": "delay-two",
+                "technologyName": "CSS"
+            },
+            {
+                "delayId": "delay-three",
+                "technologyName": "jQuery"
+            }
+        ],
+        "title": "Flat is a new meta",
+        "state": "",
+        "blockLink": ""
+    },
+    {
+        "flag": "commercial",
+        "link": "http://working.hol.es/",
+        "img": "images/working.jpg",
+        "status": "status-active",
+        "technology": [
+            {
+                "delayId": "delay-one",
+                "technologyName": "HTML"
+            },
+            {
+                "delayId": "delay-two",
+                "technologyName": "CSS"
+            },
+            {
+                "delayId": "delay-three",
+                "technologyName": "jQuery"
+            }
+        ],
+        "title": "ivSetorg inc",
+        "state": "",
+        "blockLink": ""
+    },
+    {
+        "flag": "commercial",
+        "link": "http://working-teachers.esy.es/",
+        "img": "images/working-teachers.jpg",
+        "status": "status-active",
+        "technology": [
+            {
+                "delayId": "delay-one",
+                "technologyName": "HTML"
+            },
+            {
+                "delayId": "delay-two",
+                "technologyName": "CSS"
+            },
+            {
+                "delayId": "delay-three",
+                "technologyName": "jQuery"
+            }
+        ],
+        "title": "Teachers ua inc",
+        "state": "",
+        "blockLink": ""
+    },  
+    {
+        "flag": "commercial",
+        "link": "http://lifeissimple.hol.es/",
+        "img": "images/working-shop.jpg",
+        "status": "status-active",
+        "technology": [
+            {
+                "delayId": "delay-one",
+                "technologyName": "HTML"
+            },
+            {
+                "delayId": "delay-two",
+                "technologyName": "CSS"
+            },
+            {
+                "delayId": "delay-three",
+                "technologyName": "jQuery"
+            }
+        ],
+        "title": "Property shop inc",
+        "state": "",
+        "blockLink": ""
+    }, 
+    {
+        "flag": "commercial",
+        "link": "http://working-game.esy.es/",
+        "img": "images/working-game.jpg",
+        "status": "status-active",
+        "technology": [
+            {
+                "delayId": "delay-one",
+                "technologyName": "HTML"
+            },
+            {
+                "delayId": "delay-two",
+                "technologyName": "CSS"
+            },
+            {
+                "delayId": "delay-three",
+                "technologyName": "jQuery"
+            }
+        ],
+        "title": "Battlefield MMOTOP",
+        "state": "",
+        "blockLink": ""
+    },           
     {
         "flag": "interesting",
         "link": "http://givememap.hol.es/",
@@ -43,13 +332,15 @@
                 "technologyName": "HB.js"
             }
         ],
-        "title": "Handlebars template"
+        "title": "Handlebars template",
+        "state": "loading",
+        "blockLink": ""
     },
     {
         "flag": "interesting",
         "link": "http://templateinfo.hol.es/",
         "img": "images/int1.jpg",
-        "status": "status-active",
+        "status": "status-loading",
         "technology": [
             {
                 "delayId": "delay-one",
@@ -72,6 +363,8 @@
                 "technologyName": "US.js"
             }
         ],
-        "title": "Underscore template/Backbone"
+        "title": "Underscore template/Backbone",
+        "state": "loading",
+        "blockLink": ""
     }
 ]
