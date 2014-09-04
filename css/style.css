@@ -618,26 +618,24 @@ body
     top: 0;
     left: 0;
     z-index: 1000;
-    background: rgba(0,0,0, 0.6);
+    background: rgba(0,0,0, 0.9);
   }
     .loader-body {
         position: absolute;
         top: 50%;
         left: 50%;
-        margin-top: -18px;
-        margin-left: -75px;
-        width: 150px;
+        margin-top: -59px;
+        margin-left: -95px;
+        width: 190px;
         height: 36px;
         background: #000;
     }
-    .loader-body:after {
-        content: "15%";
-        position: absolute;
-        top: 10px;
-        right: -40px;
+    .loader-body > span {
+        font-size: 56px;
+        font-family: 'Metal Mania';
     }
     .loader-indicate {
-        position: absolute;
+        position: relative;
         left: 0;
         top: 0;
         width: 14px;

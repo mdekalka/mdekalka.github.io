@@ -10,6 +10,7 @@ $(document).ready(function() {
         $contentBtn = $('.works-info-btn').find('a'),
         $toTopBtn = $('.toTop'),
         $loaderOverlay = $('.loader-overlay'),
+        $loaderIndicate = $('.loader-indicate'),
         flag = false;
 
     /*================================================================
@@ -116,7 +117,7 @@ $(document).ready(function() {
                     privateBlock.append(htmlPrivate);
                     commercialBlock.append(htmlCommercial);
 
-                    $loaderOverlay.hide();
+                    $loaderOverlay.slideUp();
                 }
             });
        };
