@@ -611,7 +611,7 @@ body
 /*================================================================
                     >>> OVERLAY <<<  
   ================================================================*/
-  .loader-overlay {
+.loader-overlay {
     position: fixed;
     width: 100%;
     height: 100%;
@@ -619,7 +619,14 @@ body
     left: 0;
     z-index: 1000;
     background: rgba(0,0,0, 0.9);
-  }
+}
+    .loader-overlay.fly .loader-indicate {
+    	width: 100%;
+    	-webkit-transition: all .3s ease;
+    	-moz-transition: all .3s ease;
+    	transition: all .3s ease;
+
+    }
     .loader-body {
         position: absolute;
         top: 50%;
@@ -634,14 +641,34 @@ body
         font-size: 56px;
         font-family: 'Metal Mania';
     }
-    .loader-indicate {
-        position: relative;
-        left: 0;
-        top: 0;
-        width: 14px;
-        height: 100%;
-        background: #71A216;
-    }
+	.loader {
+		position: relative;
+		width: 60px;
+		height: 50px;
+		margin: 0 auto;
+	}
+	.loader > div {
+		display: inline-block;
+		width: 7px;
+		height: 100%;
+		background: #8ac51b;
+		-webkit-animation: 1.2s ease-in-out 0s normal none infinite stretchdelay;
+		-moz-animation: 1.2s ease-in-out 0s normal none infinite stretchdelay;
+		animation: 1.2s ease-in-out 0s normal none infinite stretchdelay;
+	}
+	.loader .loader-line2 {
+	  animation-delay: -1.1s;
+	}
+	.loader .loader-line3 {
+	  animation-delay: -1s;
+	}
+	.loader .loader-line4 {
+	  animation-delay: -0.9s;
+	}
+	.loader .loader-line5 {
+	  animation-delay: -0.8s;
+	}
+
 
 /*================================================================
 					>>> ANIMATION <<<  
@@ -714,5 +741,36 @@ body
 	100% {
 		top: 10px;
 	}
+}
+/***============================================================***/
+@-webkit-keyframes stretchdelay {
+  0%,
+  40%,
+  100% {
+    -webkit-transform: scaleY(0.4);
+  }
+  20% {
+    -webkit-transform: scaleY(1);
+  }
+}
+@-moz-keyframes stretchdelay {
+  0%,
+  40%,
+  100% {
+    -moz-transform: scaleY(0.4);
+  }
+  20% {
+    -moz-transform: scaleY(1);
+  }
+}
+@keyframes stretchdelay {
+  0%,
+  40%,
+  100% {
+    transform: scaleY(0.4);
+  }
+  20% {
+    transform: scaleY(1);
+  }
 }
 

@@ -1,6 +1,9 @@
 ;(function($, undefined) {
 $(document).ready(function() {
 	'use strict';
+    /*================================================================
+                        >>> VAriables <<<  
+      ================================================================*/
     var $infoBtn = $('.wrapper-block').find('a'),
         $infoList = $('.wrapper-block').find('ul'),
         $status = $('.works-status'),
@@ -11,7 +14,33 @@ $(document).ready(function() {
         $toTopBtn = $('.toTop'),
         $loaderOverlay = $('.loader-overlay'),
         $loaderIndicate = $('.loader-indicate'),
-        flag = false;
+        flag = false,
+        delay = 1000;
+
+    /*================================================================
+                            >>> Function-helpers <<<  
+     ================================================================*/  
+    (function addXhrProgressEvent($) {
+        var originalXhr = $.ajaxSettings.xhr;
+        $.ajaxSetup({
+            xhr: function() {
+            var req = originalXhr(), that = this;
+                if (req) {
+                    if (typeof req.addEventListener == "function" && that.progress !== undefined) {
+                        req.addEventListener("progress", function(evt) {
+                        that.progress(evt);
+                    }, false);
+                    }
+                    if (typeof req.upload == "object" && that.progressUpload !== undefined) {
+                        req.upload.addEventListener("progress", function(evt) {
+                        that.progressUpload(evt);
+                    }, false);
+                    }
+                }
+            return req;
+            }
+        });
+    })(jQuery);  
 
     /*================================================================
                         >>> Event handlers <<<  
@@ -117,7 +146,9 @@ $(document).ready(function() {
                     privateBlock.append(htmlPrivate);
                     commercialBlock.append(htmlCommercial);
 
-                    $loaderOverlay.slideUp();
+                    $loaderOverlay.addClass('fly').fadeOut();
+
+					
                 }
             });
        };
