@@ -146,9 +146,7 @@ $(document).ready(function() {
                     privateBlock.append(htmlPrivate);
                     commercialBlock.append(htmlCommercial);
 
-                    $loaderOverlay.addClass('fly').fadeOut();
-
-					
+                    $loaderOverlay.addClass('fly').fadeOut(100);
                 }
             });
        };
