@@ -1,7 +1,7 @@
 [
     {
         "flag": "private",
-        "link": "http://gearnotcool.hol.es/",
+        "link": "http://mdekalka.github.io/Gears-not-cool/",
         "img": "images/gear_proj.png",
         "status": "status-active",
         "technology": [
@@ -24,7 +24,7 @@
     },
     {
         "flag": "private",
-        "link": "http://working-bees.hol.es/",
+        "link": "http://mdekalka.github.io/Working-bees/",
         "img": "images/working_bees.png",
         "status": "status-active",
         "technology": [
@@ -93,7 +93,7 @@
     },
     {
         "flag": "private",
-        "link": "http://puredark.hol.es/",
+        "link": "http://mdekalka.github.io/Pure-dark/",
         "img": "images/dark_proj.png",
         "status": "status-active",
         "technology": [
@@ -116,7 +116,7 @@
     },  
     {
         "flag": "private",
-        "link": "http://blueisperfect.hol.es/",
+        "link": "http://mdekalka.github.io/Blue-is-perfect/",
         "img": "images/piu_fon.jpg",
         "status": "status-active",
         "technology": [
@@ -154,7 +154,7 @@
     },   
     {
         "flag": "private",
-        "link": "http://iheardflatiscool.hol.es/",
+        "link": "http://mdekalka.github.io/I-heard-flat-is-cool/",
         "img": "images/flatiscool_fon.png",
         "status": "status-active",
         "technology": [
@@ -173,7 +173,7 @@
     },  
     {
         "flag": "private",
-        "link": "http://flatisanewmeta.hol.es/",
+        "link": "http://mdekalka.github.io/Flat-is-a-new-meta/",
         "img": "images/flatisanewmeta_fon.jpg",
         "status": "status-active",
         "technology": [
@@ -196,7 +196,7 @@
     },   
     {
         "flag": "private",
-        "link": "http://yellowdarkness.hol.es/",
+        "link": "http://mdekalka.github.io/Yellow-darkness/",
         "img": "images/yellowdarkness.jpg",
         "status": "status-active",
         "technology": [
@@ -219,7 +219,7 @@
     },
     {
         "flag": "commercial",
-        "link": "http://working.hol.es/",
+        "link": "http://mdekalka.github.io/Landing-page/",
         "img": "images/working.jpg",
         "status": "status-active",
         "technology": [
@@ -242,7 +242,7 @@
     },
     {
         "flag": "commercial",
-        "link": "http://working-teachers.esy.es/",
+        "link": "http://mdekalka.github.io/Friends-teachers/",
         "img": "images/working-teachers.jpg",
         "status": "status-active",
         "technology": [
@@ -265,7 +265,7 @@
     },  
     {
         "flag": "commercial",
-        "link": "http://lifeissimple.hol.es/",
+        "link": "http://mdekalka.github.io/Property-shop/",
         "img": "images/working-shop.jpg",
         "status": "status-active",
         "technology": [
@@ -288,7 +288,7 @@
     }, 
     {
         "flag": "commercial",
-        "link": "http://working-game.esy.es/",
+        "link": "http://mdekalka.github.io/Game-portal/",
         "img": "images/working-game.jpg",
         "status": "status-active",
         "technology": [
@@ -311,7 +311,7 @@
     },           
     {
         "flag": "interesting",
-        "link": "http://givememap.hol.es/",
+        "link": "http://mdekalka.github.io/handlebars_googleMap/",
         "img": "images/int.jpg",
         "status": "status-loading",
         "technology": [
@@ -338,7 +338,7 @@
     },
     {
         "flag": "interesting",
-        "link": "http://templateinfo.hol.es/",
+        "link": "http://mdekalka.github.io/backbone-underscore-testing/",
         "img": "images/int1.jpg",
         "status": "status-loading",
         "technology": [
